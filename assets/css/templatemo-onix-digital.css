@@ -863,10 +863,18 @@ Banner Style
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  padding: 236px 0px 130px 0px;
+  padding: 130px 0px 0px 0px;
   position: relative;
   overflow: hidden;
 }
+
+.main-banner img {
+  width: 80%;
+  margin-left: 50px;
+  margin-bottom: 100px;
+  /* filter: drop-shadow(0 8px 100px rgba(0, 0, 0, 0.277)) drop-shadow(0 0 100px 3px rgba(0, 0, 0, 0.644)); */
+}
+
 
 .main-banner:after {
   content: '';
@@ -1077,16 +1085,32 @@ About
 }
 
 .about-us .left-image {
-  margin-right: 30px;
+  width: 85%;
+  margin-right: 60px; /* Nilai ini bisa diubah untuk penyesuaian ke kiri */
+  margin-bottom: 50px; /* Mengurangi margin-bottom untuk menggeser gambar lebih ke atas */
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.2)) drop-shadow(0 12px 24px rgba(0, 0, 0, 0.2));
 }
 
-.about-us .section-heading h2 {
-  margin-right: 60px;
+
+
+.about-us .section-heading h2, 
+.about-us .section-heading h2 em, 
+.about-us .section-heading h2 span {
+  margin-right: 30px;
+  font-size: 20px; /* Mengurangi ukuran font untuk h2 */
+  padding-bottom: 10px; /* Menambahkan padding bawah untuk mengatur jarak antara h2 dan p */
+  line-height: 1.5;
+}
+
+.about-us .section-heading h2 em {
+  font-style: italic; /* Jika Anda ingin tetap mempertahankan gaya italic */
 }
 
 .about-us .section-heading p {
-  margin-top: 50px;
+  margin-top: 10px; /* Mengurangi margin atas untuk mengurangi jarak antara h2 dan p */
+  font-size: 14px; /* Mengurangi ukuran font untuk p */
 }
+
 
 .about-us .fact-item .icon {
   width: 45px;
@@ -1095,6 +1119,8 @@ About
 
 .about-us .fact-item {
   margin-top: 45px;
+  padding-bottom: 10px; 
+  padding-top: 5px; 
 }
 
 .about-us .fact-item .count-digit {
